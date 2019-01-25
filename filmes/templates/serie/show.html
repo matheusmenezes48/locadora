@@ -1,25 +1,25 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-<div>
-    <label>nome : </label>
-    {{serie.nome}}
-</div>
-<div>
-    <label>data de lançamento : </label>
-    {{serie.dt_lancamento | date:"d/m/Y"}}
-</div>
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="container-fluid">
+    <div>
+        <label>nome : </label>
+        {{serie.nome}}
+    </div>
+    <div>
+        <label>data de lançamento : </label>
+        {{serie.dt_lancamento | date:"d/m/Y"}}
+    </div>
 
-<div>
-    <label>temporadas : </label>
-    {{serie.quant_temporadaa}}
-</div>
-<div>
-    <label>Gênero : </label>
-    {{serie.genero}}
-</div>
-<div>
-    <label>sinopse : </label>
-    {{serie.sinopse}}
+    <div>
+        <label>temporadas : </label>
+        {{serie.quant_temporadaa}}
+    </div>
+    <div>
+        <label>Gênero : </label>
+        {{serie.genero}}
+    </div>
+    <div>
+        <label>sinopse : </label>
+        {{serie.sinopse}}
+    </div>
 </div>
 {% endblock %}
