@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+
+                <th>Nome</th>
+                <th>Data de lançamento</th>
+                <th>Gênero</th>
+
+            </thead>
+            <tbody>
+                {% for filme in filmes %}
+                <tr>
+                    <td>{{filme.nome}}</td>
+                    <td>{{filme.dt_lancamento}}</td>
+                    <td>{{filme.genero}}</td>
+                    <td>
+                        <a href="/filmes/filme/{{filme.id}}/">ver detalhes</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

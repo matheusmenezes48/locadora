@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>data lançamento</th>
+                    <th>Gênero</th>
+                    <th>temporadas</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for serie in series %}
+                <tr>
+                    <td>{{serie.nome}}</td>
+                    <td>{{serie.dt_lancamento}}</td>
+                    <td>{{serie.genero}}</td>
+                    <td>{{serie.quant_temporadas}}</td>
+                    <td>
+                        <a href="/filmes/serie/{{serie.id}}/">ver detalhes</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
