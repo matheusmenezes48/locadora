@@ -1,24 +1,22 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block content %}
-<div class="container-fluid">
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="col-md-12">
     <div>
         <label>nome : </label>
         {{filme.nome}}
+    </div>
+
+    <div>
+        <label>Gênero : </label>
+        {{filme.genero}}
     </div>
     <div>
         <label>data de lançamento : </label>
         {{filme.dt_lancamento | date:"d/m/Y"}}
     </div>
     <div>
-        <label>Gênero : </label>
-        {{filme.genero}}
+        <label>sinopse : </label>
+        {{filme.sinopse}}
     </div>
-    <hl>
-        <div>
-            <label>sinopse : </label>
-            {{filme.sinopse}}
-        </div>
 
 </div>
 

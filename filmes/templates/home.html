@@ -1,42 +1,15 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 <div class="container-fluid">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="carousel" src="{% static '/img/batman-begins4.jpg'%}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img class="carousel" src="{% static '/img/batman1.jpg'%}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img class="carousel" src="{% static '/img/batmanresurge.jpg'%}" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
 
 
 
-    
     <div>FILMES
     </div>
-    <div class="row">
-        <div class="col-12">
+    <div class="row"> 
+        <div class="col-md-12">
             <div class="card-group">
                 <div class="card">
-                    <img class="img" src="{% static '/img/birdbox.jpg'%}" class="card-img-top" alt="...">
+                    <img class="birdbox" src="{% static '/img/birdbox.jpg'%}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"> Bird Box</h5>
                         <a href="https://www.netflix.com/title/80196789">
@@ -46,7 +19,7 @@
 
                 </div>
                 <div class="card">
-                    <img class="img" src="{% static '/img/amador.jpg'%}" class="card-img-top" alt="...">
+                    <img class="amador" src="{% static '/img/amador.jpg'%}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Amador</h5>
                         <a href="https://www.netflix.com/title/80096984">
@@ -56,7 +29,7 @@
 
                 </div>
                 <div class="card">
-                    <img class="img" src="{% static '/img/blackmirror.jpg'%}" class="card-img-top" alt="...">
+                    <img class="blackmirror" src="{% static '/img/blackmirror.jpg'%}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Black Mirror</h5>
                         <a href="https://www.netflix.com/title/80988062">
@@ -68,128 +41,130 @@
             </div>
 
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="card-group">
-                    <div class="card">
-                        <img class="img" src="{% static '/img/os-vingadores.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Os Vingadores</h5>
-                            <a href="https://www.netflix.com/title/70217913">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <img class="img" src="{% static '/img/rebeliao.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Rebelião</h5>
-                            <a href="https://www.netflix.com/title/80106035">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-                        </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-group">
+                <div class="card">
+                    <img class="vingadores" src="{% static '/img/os-vingadores.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Os Vingadores</h5>
+                        <a href="https://www.netflix.com/title/70217913">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
 
                     </div>
-                    <div class="card">
-                        <img class="img" src="{% static '/img/tropa_de_elite.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Tropa de Elite 2</h5>
-                            <a href="https://www.netflix.com/title/70100721">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
 
-                        </div>
-
-                    </div>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="card-group">
-                    <div class="card">
-                        <img class="img" src="{% static '/img/the_originals.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"> The Originals</h5>
-                            <a href="https://www.netflix.com/title/70283261">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-
-                        </div>
-
+                <div class="card">
+                    <img class="rebeliao" src="{% static '/img/rebeliao.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Rebelião</h5>
+                        <a href="https://www.netflix.com/title/80106035">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
                     </div>
-                    <div class="card">
-                        <img class="img" src="{% static '/img/the_vampire_diaries.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">The Vampire Diaries</h5>
-                            <a href="https://www.netflix.com/title/70143860">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-                        </div>
 
-                    </div>
-                    <div class="card">
-                        <img class="img" src="{% static '/img/teen_wolf.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Teen Wolf</h5>
-                            <a href="https://www.netflix.com/title/70219484">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-
-                        </div>
-
-                    </div>
                 </div>
+                <div class="card">
+                    <img class="tropa" src="{% static '/img/tropa_de_elite.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tropa de Elite 2</h5>
+                        <a href="https://www.netflix.com/title/70100721">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
 
+                    </div>
+
+                </div>
             </div>
 
         </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="card-group">
-                    <div class="card">
-                        <img class="img" src="{% static '/img/arrow.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Arrow</h5>
-                            <a href="https://www.netflix.com/title/70242081">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <img class="img" src="{% static '/img/prison_break.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Prison Break</h5>
-                            <a href="https://www.netflix.com/title/70140425">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
-                        </div>
+    </div>
+    <div>FILMES
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-group">
+                <div class="card">
+                    <img class="theoriginals" src="{% static '/img/the_originals.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> The Originals</h5>
+                        <a href="https://www.netflix.com/title/70283261">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
 
                     </div>
-                    <div class="card">
-                        <img class="img" src="{% static '/img/the_walking_dead.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">The Walking Dead</h5>
-                            <a href="https://www.netflix.com/title/70177057">
-                                <button type="button" class="btn btn-outline-secondary">Assistir</button>
-                            </a>
 
-                        </div>
-
-                    </div>
                 </div>
+                <div class="card">
+                    <img class="thevampirediaries" src="{% static '/img/the_vampire_diaries.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Vampire Diaries</h5>
+                        <a href="https://www.netflix.com/title/70143860">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
+                    </div>
 
+                </div>
+                <div class="card">
+                    <img class="teenwolf" src="{% static '/img/teen_wolf.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Teen Wolf</h5>
+                        <a href="https://www.netflix.com/title/70219484">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
+
+                    </div>
+
+                </div>
             </div>
 
         </div>
 
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-group">
+                <div class="card">
+                    <img class="arrow" src="{% static '/img/arrow.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Arrow</h5>
+                        <a href="https://www.netflix.com/title/70242081">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img class="prisonbreak" src="{% static '/img/prison_break.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Prison Break</h5>
+                        <a href="https://www.netflix.com/title/70140425">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img class="thewalkingdead" src="{% static '/img/the_walking_dead.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Walking Dead</h5>
+                        <a href="https://www.netflix.com/title/70177057">
+                            <button type="button" class="btn btn-outline-secondary">Assistir</button>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
 </div>
 {%endblock%}

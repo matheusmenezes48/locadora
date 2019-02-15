@@ -1,14 +1,8 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block content %}
-<div class="container-fluid">
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="col-md-12">
     <div>
         <label>nome : </label>
         {{serie.nome}}
-    </div>
-    <div>
-        <label>data de lançamento : </label>
-        {{serie.dt_lancamento | date:"d/m/Y"}}
     </div>
 
     <div>
@@ -19,6 +13,11 @@
         <label>Gênero : </label>
         {{serie.genero}}
     </div>
+    <div>
+        <label>data de lançamento : </label>
+        {{serie.dt_lancamento | date:"d/m/Y"}}
+    </div>
+
     <div>
         <label>sinopse : </label>
         {{serie.sinopse}}
