@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from . models import Filme
 from . models import Serie
 from .forms import FilmeForm
+from .forms import SerieForm
 
 def home(request):
     return render(request, 'home.html',{})
@@ -33,3 +34,15 @@ def serie_list(request):
 def serie_show(request, serie_id):
     serie = Serie.objects.get(pk=serie_id)
     return render(request,'serie/show.html',{'serie':serie})
+
+def form_serie(request):
+    if (request.method == 'POST'):
+        form = SerieForm(request.POST)
+        if (form.is_valid()):
+            form.save()
+            return redirect('/filmes/serie')
+        else:
+            return render(request,'serie/form.html',{'form':form})
+    else:
+        form = SerieForm()
+        return render(request,'serie/form.html',{'form':form})
