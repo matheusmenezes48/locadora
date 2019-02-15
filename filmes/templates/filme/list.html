@@ -1,7 +1,11 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-<h1>Listagem de Filmes</h1>
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/filmes/">Home</a>
+    </li>
+    <li class="breadcrumb-item active">Listagem de filmes</li>
+</ol>
 <div class="row">
     <div class="container">
         <table class="table">
@@ -21,6 +25,7 @@
                     <td>{{filme.genero}}</td>
                     <td>
                         <a href="/filmes/filme/{{filme.id}}/">ver detalhes</a>
+                        <a href="/filmes/filme/{{filme.id}}/edit/">Editar</a>
                     </td>
                 </tr>
                 {% endfor %}

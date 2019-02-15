@@ -27,6 +27,20 @@ def form_filme(request):
         form = FilmeForm()
         return render(request,'filme/form.html',{'form':form})
 
+def filme_edit(request,filme_id):
+    if (request.method == 'POST'):
+        filme = Filme.objects.get(pk=filme_id)
+        form = FilmeForm(request.POST, instance=filme)
+        if (form.is_valid()):
+            form.save()
+            return redirect ('/filmes/filme/')
+        else:
+            return render(request,'filme/edit.html', {'form':form, 'filme_id':filme_id})
+    else:
+        filme = Filme.objects.get(pk=filme_id)
+        form = FilmeForm(instance=filme)
+        return render(request,'filme/edit.html', {'form':form, 'filme_id':filme_id})
+        
 def serie_list(request):
     series = Serie.objects.all()
     return render(request, 'serie/list.html',{'series':series}) 
