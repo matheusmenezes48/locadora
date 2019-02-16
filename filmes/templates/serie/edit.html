@@ -10,7 +10,7 @@
                 <li class="breadcrumb-item active">Editando Série</li>
             </ol>
             <div class="panel-body">
-                <form role="form" class="form-validate" action="/filmes/serie/form/" method="POST">
+                <form role="form" class="form-validate" action="/filmes/serie/{{serie_id}}/edit/" method="POST">
                     {% csrf_token %}
 
                     <div class="form-group">
