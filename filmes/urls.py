@@ -9,5 +9,7 @@ urlpatterns = [
     path('filme/<int:filme_id>/edit/',views.filme_edit),
     path('serie/',views.serie_list),
     path('serie/<int:serie_id>/',views.serie_show),
-    path('serie/form/',views.form_serie)
+    path('serie/form/',views.form_serie),
+    path('serie/<int:serie_id>/edit/',views.serie_edit)
+
 ]

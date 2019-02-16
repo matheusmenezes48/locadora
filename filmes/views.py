@@ -60,3 +60,17 @@ def form_serie(request):
     else:
         form = SerieForm()
         return render(request,'serie/form.html',{'form':form})
+
+def serie_edit(request,serie_id):
+    if (request.method == 'POST'):
+        serie = Serie.objects.get(pk=serie_id)
+        form = SerieForm(request.POST, instance=serie)
+        if (form.is_valid()):
+            form.save()
+            return redirect ('/filmes/serie/')
+        else:
+            return render(request,'serie/edit.html', {'form':form, 'serie_id':serie_id})
+    else:
+        serie = Serie.objects.get(pk=serie_id)
+        form = SerieForm(instance=serie)
+        return render(request,'serie/edit.html', {'form':form, 'serie_id':serie_id})
