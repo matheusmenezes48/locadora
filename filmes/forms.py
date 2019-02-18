@@ -9,18 +9,18 @@ class FilmeForm(ModelForm):
         fields = '__all__'
         widgets = {
             'nome': TextInput(attrs={'class':'form-control',
-            'placeholder': 'informe o Nome'}),
+            'placeholder': 'Exemplo: Homem Aranha'}),
 
             'dt_lancamento': TextInput(attrs={'class':'form-control',
-            'placeholder': 'Exemplo: 1998-12-28'}),
+            'placeholder': 'Exemplo: 2005-04-25'}),
 
             'genero': TextInput(attrs={'class':'form-control',
-            'placeholder': 'Gênero'}),
+            'placeholder': 'Exemplo: Ação'}),
 
             'sinopse': TextInput(attrs={'class':'form-control',
             'placeholder': 'Sobre o Filme'}),
             
-             'foto': TextInput(attrs={'class':'form-control'})
+
         }
 
 class SerieForm(ModelForm):
@@ -29,16 +29,16 @@ class SerieForm(ModelForm):
         fields = '__all__'
         widgets = {
             'nome': TextInput(attrs={'class':'form-control',
-             'placeholder': 'informe o Nome'}),
+             'placeholder': 'Exemplo: Shadowhantles'}),
 
             'dt_lancamento': TextInput(attrs={'class':'form-control',
             'placeholder': 'Exemplo: 1998-12-28'}),
 
             'genero': TextInput(attrs={'class':'form-control',
-            'placeholder': 'Gênero'}),
+            'placeholder': 'Exemplo: Terror'}),
 
             'quant_temporadas': TextInput(attrs={'class':'form-control',
-            'placeholder': 'Temporadas'}),
+            'placeholder': 'Exemplo: 4'}),
 
             'sinopse': TextInput(attrs={'class':'form-control',
             'placeholder': 'Sobre a Série'})
